@@ -8,17 +8,11 @@
 
 html,
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif;
 }
 
-#title-side {
-	position: fixed;
-	top: 30%;
-	transform: rotate(90deg);
-	font-weight: 600;
-	font-size: 1em;
-	text-transform: uppercase;
-	color: #000000;
+svg#filters {
+	display: none;
 }
 
 /* generics */
@@ -26,7 +20,7 @@ body {
 section {
 	position: relative;
 	box-sizing: border-box;
-	padding: 0 12rem 0 8rem;
+	padding: 0 8rem;
 }
 
 section.full {
@@ -134,9 +128,7 @@ section .container {
 	margin: 0.4rem 0;
 }
 
-
 /* header */
-
 
 #header {
 	padding-top: 6rem;
@@ -164,6 +156,11 @@ section .container {
 	padding: 2.8rem 0;
 }
 
+#header #header-blurb h1 mark {
+	background: none;
+	color: #ffffff;
+}
+
 #header #header-blurb p {
 	max-width: 24rem;
 	font-family: "Akkurat-Mono", Helvetica, Arial, sans-serif; 
@@ -175,9 +172,19 @@ section .container {
 
 #header video {
 	position: absolute;
+	width: 100%;
+	max-width: 48rem;
+	bottom: 0;
+	left: 10%;
+}
+
+#header #video-container {
+	position: absolute;
+	width: 100%;
 	height: 100%;
 	top: 0;
-	left: 16%;
+	left: 0;
+	overflow-x: hidden;
 	z-index: 1;
 }
 
@@ -252,7 +259,7 @@ section .container {
 }
 
 #newsletter #signup-form input[type=text] {
-	width: 4rem;
+	width: 5rem;
 	margin-right: 0.6rem;
 }
 
@@ -288,7 +295,7 @@ section .container {
 
 #positions .content .gen-list li {
 	box-sizing: border-box;
-	width: 50%;
+	flex: 50%;
 	padding-right: 1rem;
 	margin-top: 2rem;
 }
@@ -314,7 +321,15 @@ section .container {
 
 /* team */
 
+#team .content .gen-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
 #team .content .gen-list li {
+	box-sizing: border-box;
+	flex: 100%;
 	margin-bottom: 1.4rem;
 }
 
@@ -322,6 +337,15 @@ section .container {
 	margin-bottom: 0.3rem;
 }
 
+#team .content .gen-list li h3 a {
+	text-decoration: none;
+	color: #000000;
+}
+
+#team .content .gen-list li h3 a:hover {
+	color: #0000ff;
+	filter: url("#turbulance-filter-heavy");
+}
 
 
 /* footer */
@@ -348,4 +372,34 @@ section .container {
 	text-transform: uppercase;
 	font-weight: 600;
 	font-size: 0.7em;
+	filter: url("#turbulance-filter-light");
+}
+
+@media (max-width: 992px) {
+	.container .column {
+		flex: 4 100% !important;
+	}
+
+	#header video {
+		left: 0;
+	}
+
+	#team .content .gen-list li {
+		flex: 50%;
+		padding-right: 1rem;
+		margin-top: 0rem;
+		margin-bottom: 0.8rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.container .column .content > p.double {
+		columns: 1;
+	}
+	
+	#positions .content .gen-list li {
+		flex: 100%;
+		padding-right: 1rem;
+		margin-top: 2rem;
+	}
 }

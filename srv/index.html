@@ -14,12 +14,25 @@
 	<meta property="og:image:height" content="1246" />
 	<meta property="og:image:width" content="1246" />
 	<meta property="og:title" content="Heavy Water Aeroponics" />
-	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 	<link href="/as/css/style.css" rel="stylesheet" />
 	<title>Heavy Water Aeroponics</title>
 </head>
 
 <body>
+	<svg id="filters" xmlns="http://www.w3.org/2000/svg" version="1.1">
+		<defs>
+			<filter id="turbulance-filter-heavy">
+				<feTurbulence type="turbulence" baseFrequency="0.015 0.1" numOctaves="1" seed="1" />
+				<feDisplacementMap in="SourceGraphic" in2="turbulence" scale="9" xChannelSelector="R" yChannelSelector="B" />
+			</filter>
+
+			<filter id="turbulance-filter-light">
+				<feTurbulence type="turbulence" baseFrequency="0.01 0.02" numOctaves="1" seed="1" />
+				<feDisplacementMap in="SourceGraphic" in2="turbulence" scale="9" xChannelSelector="R" yChannelSelector="B" />
+			</filter>
+		</defs>
+	</svg>
 	<section class="black full">
 		<div class="container">
 			<div id="header">
@@ -32,9 +45,11 @@
 					<p>The real-time city is real! As layers of networks and digital information blanket urban space, new approaches to the study of the built environment are emerging. The way we describe and understand</p>
 				</div>
 
-				<video autoplay muted loop id="timelapse-header-video">
-					<source src="/as/img/timelapse-soybean-isolated.mp4" type="video/mp4">
-				</video>
+				<div id="video-container">
+					<video autoplay muted loop id="timelapse-header-video">
+						<source src="/as/img/timelapse-soybean-isolated.mp4" type="video/mp4">
+					</video>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -44,7 +59,7 @@
 			<div id="about" class="column three">
 				<div class="heading">
 					<div class="title">
-						<h2>About</h2>
+						<h2>Aeroponics?</h2>
 					</div>
 					<hr>
 				</div>
@@ -83,7 +98,7 @@
 		<div class="container">
 			<div id="newsletter">
 				<div id="newsletter-blurb">
-					Sign up to hear about our progress, our harvests and availability. No spam.
+					Sign up to receive updates about our progress, our harvests and availability. No spam just plants.
 				</div>
 
 				<form id="signup-form">
@@ -108,18 +123,23 @@
 				<div class="content">
 					<ul class="gen-list">
 						<li>
-							<h4>CFO</h4>
-							<h3>Austin Tindle</h3>
+							<h4>Process &amp; Design</h4>
+							<h3><a href=#>Austin Tindle</a></h3>
 						</li>
 
 						<li>
-							<h4>CEO</h4>
-							<h3>Maxmillion McLaughlin</h3>
+							<h4>Embedded/Mechanical Engineer</h4>
+							<h3><a href=#>Maxmillion McLaughlin</a></h3>
 						</li>
 
 						<li>
-							<h4>CPO</h4>
-							<h3>Alessandro Vecchi</h3>
+							<h4>Software Engineer</h4>
+							<h3><a href=#>Alessandro Vecchi</a></h3>
+						</li>
+
+						<li>
+							<h4>Accounting &amp; Finance</h4>
+							<h3>Evan Tucker</h3>
 						</li>
 					</ul>
 				</div>
@@ -177,7 +197,7 @@
 						</li>
 
 						<li>
-							<h3>Sales Engineer</h3>
+							<h3>Systems Engineer</h3>
 							<h4>Boulder, CO</h4>
 
 							<p> The digital revolution is layering a vast system of cameras, communication devices, microcontrollers and sensors over.</p>
@@ -185,7 +205,7 @@
 						</li>
 
 						<li>
-							<h3>Sales Engineer</h3>
+							<h3>Unpaid Sex Intern</h3>
 							<h4>Boulder, CO</h4>
 
 							<p> The digital revolution is layering a vast system of cameras, communication devices, microcontrollers and sensors over.</p>
