@@ -1,0 +1,351 @@
+@import "reset.css";
+@import "fonts.css";
+@import "fonts/stylesheet.css";
+
+::selection {
+	background: #ffff00;
+}
+
+html,
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#title-side {
+	position: fixed;
+	top: 30%;
+	transform: rotate(90deg);
+	font-weight: 600;
+	font-size: 1em;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+/* generics */
+
+section {
+	position: relative;
+	box-sizing: border-box;
+	padding: 0 12rem 0 8rem;
+}
+
+section.full {
+	margin-bottom: 3rem;
+}
+
+section.black {
+	background: #000000;
+}
+
+section.yellow {
+	background: #fff003;
+}
+
+section .container {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: stretch;
+	max-width: 52rem;
+}
+
+.container .column {
+	box-sizing: border-box;
+	padding-right: 2rem;
+	margin-bottom: 3rem;
+}
+
+.container .column.one {
+	flex: 1 1;
+}
+
+.container .column.two {
+	flex: 2 2;
+}
+
+.container .column.three {
+	flex: 3 3;
+}
+
+.container .column.four {
+	flex: 4 100%;
+}
+
+.container .column .heading .title {
+	position: relative;
+	z-index: 10;
+}
+
+.container .column .heading .title h2 {
+	display: inline-block;
+	background: #ffffff;
+	padding-right: 1rem;
+	font-weight: 600;
+	font-size: 1.3em;
+	color: #000000;
+}
+
+.container .column .heading hr {
+	position: relative;
+	top: -0.6em;
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-top: 1px solid #000000;
+	z-index: 1;
+}
+
+.container .column .content {
+	padding-top: 1.4rem;
+}
+
+.container .column .content > p {
+	font-family: "Akkurat-Mono", Helvetica, Arial, sans-serif; 
+	font-weight: 400;
+	font-size: 0.7em;
+	line-height: 1.6em;
+	color: #000000;
+}
+
+.container .column .content > p.double {
+	columns: 2;
+}
+
+.container .column .content .gen-list {
+	position: relative;
+	list-style-type: none;
+}
+
+.container .column .content .gen-list li h3 {
+	font-weight: 600;
+	font-size: 0.9em;
+	margin-bottom: 0.3rem;
+}
+
+.container .column .content .gen-list li h4 {
+	font-weight: 400;
+	font-size: 0.7em;
+	color: #484848;
+}
+
+.container .column .content .gen-list li p {
+	font-weight: 400;
+	font-size: 0.8em;
+	line-height: 1.5em;
+	margin: 0.4rem 0;
+}
+
+
+/* header */
+
+
+#header {
+	padding-top: 6rem;
+	padding-bottom: 5rem;
+}
+
+#header #header-blurb {
+	position: relative;
+	z-index: 2;
+}
+
+#header #header-blurb svg {
+	width: 2rem;
+}
+
+#header #header-blurb svg path {
+	fill: #ffffff;
+}
+
+#header #header-blurb h1 {
+	font-weight: 500;
+	font-size: 2.3em;
+	line-height: 1.2em;
+	color: #ffffff;
+	padding: 2.8rem 0;
+}
+
+#header #header-blurb p {
+	max-width: 24rem;
+	font-family: "Akkurat-Mono", Helvetica, Arial, sans-serif; 
+	font-weight: 400;
+	font-size: 0.8em;
+	line-height: 1.6em;
+	color: #adadad;
+}
+
+#header video {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 16%;
+	z-index: 1;
+}
+
+/* contact-info */
+
+#contact-info > div {
+	padding-bottom: 0.8rem;
+}
+
+#contact-info > div:last-child {
+	padding-bottom: 0;
+}
+
+#contact-info h3 {
+	font-weight: 600;
+	font-size: 0.9em;
+}
+
+#contact-info h4 {
+	font-weight: 500;
+	font-size: 0.8em;
+	padding: 0.2rem 0;
+}
+
+#contact-info p {
+	padding-top: 0.5rem;
+	font-weight: 400;
+	font-size: 0.8em;
+	line-height: 1.5em;
+}
+
+/* newsletter */
+
+#newsletter {
+	display: flex;
+	align-items: center;
+	padding: 2rem 0;
+}
+
+#newsletter #newsletter-blurb {
+	margin-right: 2rem;
+	font-family: "Akkurat-Mono", Helvetica, Arial, sans-serif; 
+	color: #000000;
+	font-weight: 400;
+	font-size: 0.8em;
+	line-height: 1.4em;
+}
+
+
+#newsletter #newsletter-blurb::selection {
+	color: #ffffff;
+	background: #000000;
+}
+
+
+#newsletter  #signup-form {
+	position: relative;
+	display: flex;
+}
+
+#newsletter #signup-form input {
+	height: 2rem;
+	-webkit-appearance: none;
+	box-sizing: border-box;
+	display: block;
+	border: 1px solid #000000;
+	margin: 0;
+}
+
+#newsletter #signup-form input[type=email] {
+	width: 12rem;
+}
+
+#newsletter #signup-form input[type=text] {
+	width: 4rem;
+	margin-right: 0.6rem;
+}
+
+#newsletter #signup-form input[type=email],
+#newsletter #signup-form input[type=text] {
+	background: #ffffff;
+	color: #000000;
+	font-weight: 500;
+	font-size: 0.8em;
+	padding: 0 0.9em;
+}
+
+#newsletter #signup-form input[type=submit] {
+	background: #000000;
+	color: #ffffff;
+	border-left: none;
+	font-weight: 600;
+	font-size: 0.8em;
+	padding: 0 0.8rem;
+}
+
+#newsletter #signup-form input[type=submit]:hover {
+	background: #ffffff;
+	color: #000000;
+}
+
+/* positions */
+
+#positions .content .gen-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#positions .content .gen-list li {
+	box-sizing: border-box;
+	width: 50%;
+	padding-right: 1rem;
+	margin-top: 2rem;
+}
+
+
+#positions .content .gen-list li a {
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 0.8em;
+	line-height: 1.5em;
+	color: #0000ff;
+}
+
+#positions .content .gen-list li a:hover {
+	text-decoration: underline;
+}
+
+/* plants */
+
+#plants .content .gen-list li {
+	margin-bottom: 1rem;
+}
+
+/* team */
+
+#team .content .gen-list li {
+	margin-bottom: 1.4rem;
+}
+
+#team .content .gen-list li h4 {
+	margin-bottom: 0.3rem;
+}
+
+
+
+/* footer */
+
+#footer {
+	position: relative;
+	width: 100%;
+	border-top: 1px solid #000000;
+}
+
+#footer #mark {
+	display: flex;
+	align-items: center;
+	padding: 1.4rem 0;
+}
+
+#footer #mark svg {
+	display: inline-block;
+	width: 1rem;
+	margin-right: 1.4rem;
+}
+
+#footer #mark span {
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 0.7em;
+}
