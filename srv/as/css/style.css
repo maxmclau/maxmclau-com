@@ -9,10 +9,14 @@
 html,
 body {
 	font-family: "Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif;
+	background: #fff003;
 }
 
 svg#filters {
-	display: none;
+	position: absolute;
+	height: 256px;
+	visibility: hidden;
+	top: -256px;
 }
 
 /* generics */
@@ -21,10 +25,15 @@ section {
 	position: relative;
 	box-sizing: border-box;
 	padding: 0 8rem;
+	background: #ffffff;
 }
 
-section.full {
-	margin-bottom: 3rem;
+section.partial {
+	padding-bottom: 3rem;
+}
+
+section.full + section.partial {
+	padding-top: 3rem;
 }
 
 section.black {
@@ -45,7 +54,6 @@ section .container {
 .container .column {
 	box-sizing: border-box;
 	padding-right: 2rem;
-	margin-bottom: 3rem;
 }
 
 .container .column.one {
@@ -190,7 +198,13 @@ section .container {
 
 /* contact-info */
 
+#contact-info {
+	display: flex;
+	flex-flow: row wrap;
+}
+
 #contact-info > div {
+	flex: 100%;
 	padding-bottom: 0.8rem;
 }
 
@@ -207,6 +221,18 @@ section .container {
 	font-weight: 500;
 	font-size: 0.8em;
 	padding: 0.2rem 0;
+}
+
+#contact-info h4 a {
+	text-decoration: underline;
+	color: #000000;
+}
+
+
+#contact-info h4 a:hover {
+	text-decoration: none;
+	color: #0000ff;
+	filter: url("#turbulance-filter-heavy");
 }
 
 #contact-info p {
@@ -237,6 +263,10 @@ section .container {
 #newsletter #newsletter-blurb::selection {
 	color: #ffffff;
 	background: #000000;
+}
+
+#newsletter #newsletter-blurb summary {
+	display: none;
 }
 
 
@@ -316,7 +346,7 @@ section .container {
 /* plants */
 
 #plants .content .gen-list li {
-	margin-bottom: 1rem;
+	margin-top: 1.2rem;
 }
 
 /* team */
@@ -338,13 +368,15 @@ section .container {
 }
 
 #team .content .gen-list li h3 a {
-	text-decoration: none;
+	text-decoration: underline;
 	color: #000000;
 }
 
 #team .content .gen-list li h3 a:hover {
+	text-decoration: none;
 	color: #0000ff;
 	filter: url("#turbulance-filter-heavy");
+	-webkit-filter: url("#turbulance-filter-heavy");
 }
 
 
@@ -372,16 +404,35 @@ section .container {
 	text-transform: uppercase;
 	font-weight: 600;
 	font-size: 0.7em;
-	filter: url("#turbulance-filter-light");
 }
 
 @media (max-width: 992px) {
+	section {
+		padding: 0 6rem;
+	}
+
 	.container .column {
 		flex: 4 100% !important;
 	}
 
+	.column + .column {
+		padding-top: 3rem;
+	}
+
 	#header video {
 		left: 0;
+	}
+
+	#contact-info > div {
+		flex: 50%;
+	}
+
+	#newsletter #newsletter-blurb span {
+		display: none;
+	} 
+	
+	#newsletter #newsletter-blurb summary {
+		display: inline-block;
 	}
 
 	#team .content .gen-list li {
@@ -393,6 +444,10 @@ section .container {
 }
 
 @media (max-width: 768px) {
+	section {
+		padding: 0 3rem;
+	}
+
 	.container .column .content > p.double {
 		columns: 1;
 	}

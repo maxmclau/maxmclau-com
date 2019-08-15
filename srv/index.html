@@ -33,6 +33,7 @@
 			</filter>
 		</defs>
 	</svg>
+
 	<section class="black full">
 		<div class="container">
 			<div id="header">
@@ -54,7 +55,7 @@
 		</div>
 	</section>
 
-	<section>
+	<section class="partial">
 		<div class="container">
 			<div id="about" class="column three">
 				<div class="heading">
@@ -84,8 +85,19 @@
 					</p>
 				</div>
 				<div>
-					<h4>+1 (239) 821-8536</h4>
-					<h4>info@heavywateraero.com</h4>
+					<h4>+1 (970) 368-3594</h4>
+					<h4 id="email-link">
+						<script type="text/javascript">
+							const email = ('info' + '@' + 'heavywateraero.com');
+							let link = document.createTextNode(email);
+
+							let a = document.createElement('a');
+							a.href = 'mailto:' + email;
+
+							a.appendChild(link);
+
+							document.getElementById('email-link').appendChild(a);
+						</script>
 				</div>
 				<div>
 					<p>Email is the easiest way to get in touch and we recommend signing up for our newletter to get the latest updates.</p>
@@ -98,20 +110,27 @@
 		<div class="container">
 			<div id="newsletter">
 				<div id="newsletter-blurb">
-					Sign up to receive updates about our progress, our harvests and availability. No spam just plants.
+					<span>Sign up to receive updates about our progress, our harvests and availability. No spam just plants.</span>
+					<summary>Sign up for our newsletter.</summary>
 				</div>
 
-				<form id="signup-form">
-					<input type="text" placeholder="Zip" id="zip" name="MERGE0" id="MERGE0">
-					<input type="email" placeholder="Email Address" id="email" name="MERGE0" id="MERGE0">
+				<form id="signup-form" action="https://heavywateraero.us3.list-manage.com/subscribe/post" method="POST">
+					<input type="hidden" name="u" value="83f97ec5c05e6ad1fccd8a211">
+					<input type="hidden" name="id" value="4786abe3df">
 
-					<input type="submit">
+					<input type="text" placeholder="Zip" name="MERGE3" id="MERGE3" size="25" value="">
+					<input type="email" placeholder="Email Address" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
+
+					<input type="submit" name="submit" value="Subscribe">
+
+					<input type="hidden" name="ht" value="41dc88b55adfab16f1bea9464c57f1bce2299754:MTU2NTgwNjQ0MC41MTM4">
+					<input type="hidden" name="mc_signupsource" value="homepage">
 				</form>
 			</div>
 		</div>
 	</section>
 
-	<section>
+	<section class="partial">
 		<div class="container">
 			<div id="team" class="column one">
 				<div class="heading">
@@ -124,12 +143,12 @@
 					<ul class="gen-list">
 						<li>
 							<h4>Process &amp; Design</h4>
-							<h3><a href=#>Austin Tindle</a></h3>
+							<h3><a href="https://tndl.io/">Austin Tindle</a></h3>
 						</li>
 
 						<li>
 							<h4>Embedded/Mechanical Engineer</h4>
-							<h3><a href=#>Maxmillion McLaughlin</a></h3>
+							<h3><a href="https://maxmclau.com">Maxmillion McLaughlin</a></h3>
 						</li>
 
 						<li>
@@ -157,8 +176,8 @@
 
 					<ul class="gen-list">
 						<li>
-							<h3>Romaine Lettuce</h3>
-							<h4>22-30 Days</h4>
+							<h3>Baby Spinach</h3>
+							<h4>18-25 Days</h4>
 							<p>Are UFOs just masked superpower-built technology or visitors from beyond our Solar System? Robin and Daniel don’t always agree. But neither does anyone else.</p>
 						</li>
 
@@ -176,7 +195,11 @@
 					</ul>
 				</div>
 			</div>
+		</div>
+	</section>
 
+	<section class="partial">
+		<div class="container">
 			<div id="positions" class="column four">
 				<div class="heading">
 					<div class="title">
@@ -217,7 +240,7 @@
 		</div>
 	</section>
 
-	<section>
+	<section class="partial">
 		<div class="container">
 			<div id="footer">
 				<div id="mark">
@@ -231,9 +254,17 @@
 		</div>
 	</section>
 
-
-
+	<script type="text/javascript" src="/as/js/simplex.js"></script>
 	<script type="text/javascript" src="/as/js/js.js"></script>
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145716481-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-145716481-1');
+	</script>
 </body>
 
 </html>
