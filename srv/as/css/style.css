@@ -76,6 +76,10 @@ section p {
 	letter-spacing: 0.025em;
 }
 
+section p + p {
+	margin-top: 12px;
+}
+
 section p a {
 	color: #f82148;
 }
@@ -88,10 +92,6 @@ section summary {
 	margin-top: 0.5rem;
 }
 
-section ul {
-	list-style-image: url(/as/img/seg-noun.svg);
-}
-
 section .content a.maj {
 	display: block;
 	color: #f82148;
@@ -102,11 +102,23 @@ section .content a.maj {
 	margin: 0.8rem 0;
 }
 
+section .content a.maj:hover {
+	text-decoration: none;
+}
+
 section .content a.maj::before {
 	display: inline-block;
-	content: url(/as/img/x-noun.svg);
 	width: 0.8rem;
 	margin-right: 0.4rem;
+	transform: translateY(3px);
+}
+
+section .content a.maj.x::before {
+	content: url(/as/img/x-noun.svg);
+}
+
+section .content a.maj.seg::before {
+	content: url(/as/img/seg-noun.svg);
 }
 
 
