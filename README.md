@@ -1,10 +1,5 @@
 ## maxmclau-com
 
-```
-Should pale death with treble dread
-Make the ocean caves our bed
-```
-
 #### Build
 
 ```bash
